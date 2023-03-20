@@ -18,7 +18,7 @@
     <style name="iftarTimeCard" parent="CardView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">80dp</item>
-        <item name="android:layout_marginTop">@dimen/spaceMedium</item>
+        <item name="android:layout_marginTop">@dimen/spaseSmall</item>
         <item name="android:backgroundTint">@color/weather_background</item>
         <item name="cardCornerRadius">@dimen/spaceXLarge</item>
     </style>
