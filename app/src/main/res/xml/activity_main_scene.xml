@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart ="@id/base_state"
+        app:constraintSetEnd="@id/dial"
+        app:duration="3000">
+        <OnSwipe
+            app:touchAnchorId="@id/dial_pad"
+            app:dragDirection="dragUp"
+            app:touchAnchorSide="top" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/base_state">
+        <Constraint android:id="@id/dial_pad">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/swipeUpMassage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dial_pad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.479"
+            android:layout_marginBottom="8dp">
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/txt_swipe_up_massage" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/arrow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="270"
+            app:layout_constraintBottom_toBottomOf="@+id/swipeUpMassage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/swipeUpMassage"
+            app:layout_constraintTop_toTopOf="@+id/swipeUpMassage">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/ramadanAnimationView1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-40dp"
+            />
+        <Constraint
+            android:id="@+id/ramadanAnimationView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotationY="180"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-40dp"
+            />
+
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:layout_marginTop="168dp"
+            android:layout_marginEnd="-24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            >
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="@string/ramadan_kareem"/>
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customStringValue="64sp"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/icMoon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="56dp"
+            android:rotation="16"
+            android:rotationY="180"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/view"
+             >
+            <CustomAttribute
+                app:attributeName="srcCompat"
+                app:customReference="@drawable/ic_mode"
+                />
+
+            <CustomAttribute
+                app:attributeName="background"
+                app:customReference="@drawable/default_shadow"/>
+
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tvSuptitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginTop="16dp"
+            android:gravity="end"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            >
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="@string/welcome_text"/>
+            <CustomAttribute
+                app:attributeName="gravity"
+                app:customIntegerValue="8388613"/> <!--to change gravity value to end-->
+        </Constraint>
+
+
+    </ConstraintSet>
+
+<!-- ****************** ****************** ****************** ****************** ****************** ****************** -->
+
+    <ConstraintSet android:id="@+id/dial">
+        <Constraint android:id="@id/dial_pad">
+            <Layout
+                android:layout_width="0dp"
+                android:layout_height="500dp"
+                android:layout_marginBottom="-20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/swipeUpMassage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/dial_pad"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.479" >
+            <CustomAttribute
+                app:attributeName="textColor"
+                app:customColorValue="@color/txt_almost_invisible" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/arrow_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="90"
+            app:layout_constraintBottom_toBottomOf="@+id/swipeUpMassage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/swipeUpMassage"
+            app:layout_constraintTop_toTopOf="@+id/swipeUpMassage">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/ramadanAnimationView1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-40dp"
+            android:visibility="invisible"
+            />
+        <Constraint
+            android:id="@+id/ramadanAnimationView2"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:rotationY="180"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="-40dp"
+            android:visibility="invisible"
+            />
+
+        <Constraint
+            android:id="@+id/icMoon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="44dp"
+            android:rotation="28"
+            android:rotationY="180"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <CustomAttribute
+                app:attributeName="srcCompat"
+                app:customReference="@drawable/ic_lighting_moon" />
+
+            <CustomAttribute
+                app:attributeName="background"
+                app:customReference="@drawable/shadow"/>
+        </Constraint>
+
+
+        <Constraint
+            android:id="@+id/view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="-40dp"
+            android:layout_marginTop="68dp"
+            android:background="@drawable/circle"
+            android:rotation="45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Constraint
+            android:id="@+id/tvTitle"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="56dp"
+            android:gravity="center"
+            android:lineSpacingExtra="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/view"
+            >
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="@string/iftar_dates"/>
+
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customStringValue="56sp"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/tvSuptitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="@+id/view"
+            app:layout_constraintStart_toStartOf="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            >
+            <CustomAttribute
+                app:attributeName="text"
+                app:customStringValue="@string/according_to_the_time_of_gaza"/>
+            <CustomAttribute
+                app:attributeName="gravity"
+                app:customIntegerValue="8388611"/> <!--to change gravity value to start-->
+
+
+        </Constraint>
+
+
+    </ConstraintSet>
+
+</MotionScene>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RnmadanMonthTask</string>
+    <string name="ramadan_kareem">Ramadan\nKareem</string>
+    <string name="signup">Signup</string>
+    <string name="welcome_text">Ramadan kareem! Let our app\'s captivating animation screen lead you to the time of iftar with just a simple swipe up.</string>
+    <string name="swipe_massage">Swipe up for weekly Ramadan iftar time</string>
+    <string name="iftar_dates">This Week\'s Iftar Timings</string>
+    <string name="according_to_the_time_of_gaza">According to the Time of Gaza City</string>
+    <string name="thursday">Thursday</string>
+    <string name="iftarTime_thursday">06 : 03 PM</string>
+    <string name="iftarTime_friday">06 : 04 PM</string>
+    <string name="iftarTime_saturday">06 : 04 PM</string>
+    <string name="iftarTime_sunday">06 : 05 PM</string>
+    <string name="iftarTime_monday">06 : 05 PM</string>
+    <string name="iftarTime_tuesday">06 : 05 PM</string>
+    <string name="iftarTime_wednesday">06 : 06 PM</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+</resources>

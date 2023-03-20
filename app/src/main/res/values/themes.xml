@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RnmadanMonthTask" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/primaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style name="iftarTimeCard" parent="CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_marginTop">@dimen/spaceMedium</item>
+        <item name="android:backgroundTint">@color/weather_background</item>
+        <item name="cardCornerRadius">@dimen/spaceXLarge</item>
+    </style>
+
+    <style name="dayOfWeek" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/spaceMedium</item>
+        <item name="android:layout_marginTop">@dimen/spaceMedium</item>
+        <item name="android:fontFamily">@font/poppins_light</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/txt_mediumSize</item>
+    </style>
+
+    <style name="iftarTime" parent="Widget.AppCompat.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/txt_white</item>
+        <item name="android:textSize">@dimen/txt_smallSize</item>
+    </style>
+
+    <style name="weatherState">
+        <item name="android:layout_width">@dimen/weather_icon_dimen</item>
+        <item name="android:layout_height">@dimen/weather_icon_dimen</item>
+        <item name="android:layout_marginStart">@dimen/spaceMedium</item>
+        <item name="android:background">@drawable/rounded_weather_background</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+</resources>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_background"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="39dp"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/weather_icon_dimen"
+        android:layout_height="@dimen/weather_icon_dimen"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="-24dp"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/twinkleStarsAnimationView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/twinkle_stars"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/twinkleStarsAnimationView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/spaceLarge"
+        android:layout_marginEnd="@dimen/weather_icon_dimen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSuptitle"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/twinkle_stars"
+        tools:layout_editor_absoluteY="264dp" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/story_maker"
+        android:gravity="center"
+        android:text="@string/ramadan_kareem"
+        android:textColor="@color/txt_yellow"
+        android:textSize="64sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+    <TextView
+        android:id="@+id/tvSuptitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="@dimen/spaceMedium"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins_light"
+        android:gravity="end"
+        android:text="@string/welcome_text"
+        android:textColor="#E6FFFFFF"
+        android:textSize="@dimen/spaceMedium"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/stars" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/shootingStarAnimationView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/shooting_star"
+        app:lottie_speed="0.8" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/shootingStarAnimationView2"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/shooting_star"
+        app:lottie_speed="0.3" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadanAnimationView1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramadan"
+        app:lottie_speed="0.8" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/ramadanAnimationView2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="-40dp"
+        android:rotationY="180"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/ramadan"
+        app:lottie_speed="0.8" />
+
+
+    <TextView
+        android:id="@+id/swipeUpMassage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spaceXxLarge"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/swipe_massage"
+        android:textColor="@color/txt_swipe_up_massage"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/dial_pad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        app:layout_constraintBottom_toBottomOf="@+id/swipeUpMassage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/swipeUpMassage"
+        app:layout_constraintTop_toTopOf="@+id/swipeUpMassage"
+        app:srcCompat="@drawable/arrow_right" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/dial_pad"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:backgroundTint="@color/card_lite"
+        app:cardCornerRadius="@dimen/spaceMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/spaceLarge"
+                android:paddingEnd="@dimen/spaceLarge"
+                android:paddingBottom="@dimen/spaceLarge">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tape"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/spaseSmall"
+                    android:layout_marginTop="@dimen/spaseSmall"
+                    android:backgroundTint="@color/parenCardBackgrond"
+                    app:cardCornerRadius="@dimen/spaseXSmall"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_thusday"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tape">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_thursday"
+                            android:text="@string/thursday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_thursday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_thursday"
+                            android:text="@string/iftarTime_thursday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_thursday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_thursday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_thursday"
+                            app:srcCompat="@drawable/ic_weather_sun_cloud"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_friday"
+                    style="@style/iftarTimeCard"
+                    app:layout_constraintTop_toBottomOf="@+id/card_thusday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_friday"
+                            android:text="@string/friday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_friday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_friday"
+                            android:text="@string/iftarTime_friday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_friday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_friday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_friday"
+                            app:srcCompat="@drawable/ic_weather_rain"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_saturday"
+                    app:layout_constraintTop_toBottomOf="@+id/card_friday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_saturday"
+                            android:text="@string/saturday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_saturday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_saturday"
+                            android:text="@string/iftarTime_saturday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_saturday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_saturday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_saturday"
+                            app:srcCompat="@drawable/ic_sun_weather"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_sunday"
+                    app:layout_constraintTop_toBottomOf="@+id/card_saturday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_sunday"
+                            android:text="@string/sunday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_sunday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_sunday"
+                            android:text="@string/iftarTime_sunday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_sunday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_sunday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_sunday"
+                            app:srcCompat="@drawable/ic_sun_weather"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_monday"
+                    app:layout_constraintTop_toBottomOf="@+id/card_sunday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_monday"
+                            android:text="@string/monday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_monday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_monday"
+                            android:text="@string/iftarTime_sunday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_monday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_monday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_monday"
+                            app:srcCompat="@drawable/ic_weather_sun_cloud"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_tuesday"
+                    app:layout_constraintTop_toBottomOf="@+id/card_monday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_tuesday"
+                            android:text="@string/tuesday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_tuesday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_tuesday"
+                            android:text="@string/iftarTime_tuesday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_tuesday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_tuesday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_tuesday"
+                            app:srcCompat="@drawable/ic_weather_rain"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    style="@style/iftarTimeCard"
+                    android:id="@+id/card_wednesday"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_tuesday"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/dayOfWeek"
+                            android:id="@+id/tvDay_wednesday"
+                            android:text="@string/wednesday"
+                            app:layout_constraintStart_toEndOf="@+id/img_wither_wednesday"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            style="@style/iftarTime"
+                            android:id="@+id/tvIftarTime_wednesday"
+                            android:text="@string/iftarTime_wednesday"
+                            app:layout_constraintStart_toStartOf="@+id/tvDay_wednesday"
+                            app:layout_constraintTop_toBottomOf="@+id/tvDay_wednesday" />
+
+                        <ImageView
+                            style="@style/weatherState"
+                            android:id="@+id/img_wither_wednesday"
+                            app:srcCompat="@drawable/ic_weather_moon"
+                            tools:ignore="MissingConstraints" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/circle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="@dimen/weather_icon_dimen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle2"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle3"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginEnd="110dp"
+        android:layout_marginBottom="@dimen/spaceLarge"
+        app:layout_constraintBottom_toTopOf="@+id/circle2"
+        app:layout_constraintEnd_toStartOf="@+id/circle2"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle4"
+        android:layout_width="@dimen/spaseXSmall"
+        android:layout_height="@dimen/spaseXSmall"
+        android:layout_marginEnd="@dimen/weather_icon_dimen"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintEnd_toStartOf="@+id/circle3"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle5"
+        android:layout_width="1dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="@dimen/spaseXSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circle" />
+    
+    <ImageView
+        android:id="@+id/circle6"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="@dimen/spaceLarge"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle7"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="@dimen/weather_icon_dimen"
+        android:layout_marginTop="@dimen/spaceMedium"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle8"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="@dimen/spaceLarge"
+        android:layout_marginTop="@dimen/weather_icon_dimen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle9"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle10"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="@dimen/spaceLarge"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circle9"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle11"
+        android:layout_width="3dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/circle3"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle12"
+        android:layout_width="2dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="@dimen/spaceXLarge"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/circle13"
+        android:layout_width="@dimen/spaseXSmall"
+        android:layout_height="@dimen/spaseXSmall"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="@dimen/spaceMedium"
+        app:layout_constraintBottom_toTopOf="@+id/circle12"
+        app:layout_constraintEnd_toStartOf="@+id/circle12"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spaceXxLarge"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_star" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/circle11"
+        app:srcCompat="@drawable/ic_star" />
+
+    <ImageView
+        android:id="@+id/img_star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/weather_icon_dimen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twinkleStarsAnimationView"
+        app:srcCompat="@drawable/ic_star" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spaceLarge"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_star" />
+
+    <ImageView
+        android:id="@+id/icMoon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="56dp"
+        android:rotation="16"
+        android:rotationY="180"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/ic_mode" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="-12dp"
+        android:layout_marginTop="@dimen/spaseXSmall"
+        android:rotation="-8"
+        app:layout_constraintStart_toEndOf="@+id/icMoon"
+        app:layout_constraintTop_toTopOf="@+id/icMoon"
+        app:srcCompat="@drawable/ic_star_moon" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
